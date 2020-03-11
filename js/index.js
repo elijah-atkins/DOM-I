@@ -87,3 +87,19 @@ bcH4[1].textContent = siteContent["main-content"]["product-h4"]
 bcP[1].textContent = siteContent["main-content"]["product-content"]
 bcH4[2].textContent = siteContent["main-content"]["vision-h4"]
 bcP[2].textContent = siteContent["main-content"]["vision-content"]
+
+//contact
+const contact = document.querySelector('.contact');
+const conH4 = contact.getElementsByTagName("h4");
+const conP = contact.getElementsByTagName("p");
+
+conH4[0].textContent = siteContent["contact"]["contact-h4"]
+conP[0].textContent = siteContent["contact"]["address"]
+conP[1].textContent = siteContent["contact"]["phone"]
+conP[2].textContent = siteContent['contact']["email"]
+
+//footer
+const footer = document.querySelector("footer");
+const footerP = footer.getElementsByTagName("p")
+footerP[0].textContent = siteContent['footer']['copyright']
+console.log(footerP)
