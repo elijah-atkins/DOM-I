@@ -38,13 +38,21 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-logo.src ="img/logo.png"
+  let logo = document.getElementById("logo-img");
+  logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let headerImg = document.getElementById("cta-img");
-//headerImg.setAttribute('src', siteContent["cta"]["img-src"])
-headerImg.src ="img/header-img.png"
+  let headerImg = document.getElementById("cta-img");
+  headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-let midPageAccent = document.getElementById("middle-img");
-midPageAccent.src ="img/mid-page-accent.jpg"
+  let midPageAccent = document.getElementById("middle-img");
+  midPageAccent.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+  const nav = document.getElementsByTagName("nav")
+  const link = document.getElementsByTagName("a")
+  link[0].textContent = siteContent["nav"]["nav-item-1"]
+  link[1].textContent = siteContent["nav"]["nav-item-2"]
+  link[2].textContent = siteContent["nav"]["nav-item-3"]
+  link[3].textContent = siteContent["nav"]["nav-item-4"]
+  link[4].textContent = siteContent["nav"]["nav-item-5"]
+  link[5].textContent = siteContent["nav"]["nav-item-6"]
+
