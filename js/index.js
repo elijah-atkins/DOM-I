@@ -59,10 +59,6 @@ link[2].textContent = siteContent["nav"]["nav-item-3"]
 link[3].textContent = siteContent["nav"]["nav-item-4"]
 link[4].textContent = siteContent["nav"]["nav-item-5"]
 link[5].textContent = siteContent["nav"]["nav-item-6"]
-//nav Green
-for (let i = 0; i < link.length; i++){
-  link[i].style.color = 'green'
-}
 
 // cta content
 const h1 = document.getElementsByTagName("h1")
@@ -106,3 +102,23 @@ conP[2].textContent = siteContent['contact']["email"]
 const footer = document.querySelector("footer");
 const footerP = footer.getElementsByTagName("p")
 footerP[0].textContent = siteContent['footer']['copyright']
+
+
+//Utilize `.appendChild()` and `.prepend()` to add two new items 
+//to the navigation system. You can call them whatever you want.
+
+const prependItem = document.createElement('a')
+prependItem.textContent = "ClickMe"
+
+const childItem = document.createElement('a')
+childItem.textContent = "Not Me"
+
+const navBar = document.querySelector('nav')
+navBar.prepend(prependItem)
+
+navBar.appendChild(childItem)
+
+//nav Green
+for (let i = 0; i < link.length; i++){
+  link[i].style.color = 'green'
+}
