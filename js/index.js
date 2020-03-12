@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \nIs \nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -64,7 +64,10 @@ link[5].textContent = siteContent["nav"]["nav-item-6"]
 const h1 = document.getElementsByTagName("h1")
 const button = document.getElementsByTagName("button")
 button[0].textContent = siteContent["cta"]["button"]
-h1[0].textContent = siteContent["cta"]["h1"]
+const lineBreak = document.createElement('br')
+h1[0].innerText = siteContent["cta"]["h1"]
+
+
 
 //main-content
 const mainContent = document.querySelector('.top-content')
@@ -122,3 +125,15 @@ navBar.appendChild(childItem)
 for (let i = 0; i < link.length; i++){
   link[i].style.color = 'green'
 }
+
+
+//stretch button
+button[0].addEventListener('mouseenter', (event) =>{
+  h1[0].style.backgroundColor = 'green'
+})
+button[0].addEventListener('mouseleave', (event) => {
+  h1[0].style.backgroundColor = 'white'
+})
+button[0].addEventListener('mousedown', (event) =>{
+  navBar.style.backgroundColor = 'black'
+})
