@@ -51,14 +51,18 @@ midPageAccent.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 //Navbar links
-const nav = document.getElementsByTagName("nav")
 const link = document.getElementsByTagName("a")
+
 link[0].textContent = siteContent["nav"]["nav-item-1"]
 link[1].textContent = siteContent["nav"]["nav-item-2"]
 link[2].textContent = siteContent["nav"]["nav-item-3"]
 link[3].textContent = siteContent["nav"]["nav-item-4"]
 link[4].textContent = siteContent["nav"]["nav-item-5"]
 link[5].textContent = siteContent["nav"]["nav-item-6"]
+//nav Green
+for (let i = 0; i < link.length; i++){
+  link[i].style.color = 'green'
+}
 
 // cta content
 const h1 = document.getElementsByTagName("h1")
@@ -102,4 +106,3 @@ conP[2].textContent = siteContent['contact']["email"]
 const footer = document.querySelector("footer");
 const footerP = footer.getElementsByTagName("p")
 footerP[0].textContent = siteContent['footer']['copyright']
-console.log(footerP)
